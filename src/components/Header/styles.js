@@ -1,21 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  spacer: {
-    height: 64,
-
-    [theme.breakpoints.down('xs')]: {
-      height: 56,
-    },
+  header: {
+    zIndex: 3000,
   },
   titleDescription: {
     marginLeft: 'auto',

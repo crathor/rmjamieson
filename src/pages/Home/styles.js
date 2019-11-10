@@ -1,97 +1,71 @@
 import { makeStyles } from '@material-ui/core/styles';
 import books from '../../assets/books.jpg';
+import rebecca from '../../assets/rebecca.png';
 
 const styles = makeStyles(theme => ({
-  icon: {
-    fontSize: '12vw',
-    color: '#fff',
-  },
-  iconBack: {
-    fontSize: 59,
-    color: '#fff',
-  },
   authorSection: {
-    minHeight: '100vh',
-  },
-  hero: {
-    position: 'relative',
-    zIndex: 1,
-    height: '100vh',
-    flexGrow: 1,
+    minHeight: 'calc(100vh - 64px)',
     display: 'flex',
     alignItems: 'center',
-    background: `url('${books}')`,
-    backgroundColor: theme.palette.white.main,
-    backgroundBlendMode: 'luminosity',
+    background: theme.palette.white.main,
+
+    [theme.breakpoints.down('md')]: {
+      padding: `${theme.spacing(10)}px 0px`,
+    },
+  },
+  authorContainer: {},
+  authorGrid: {
+    background: theme.palette.primary.light,
+    color: theme.palette.white.main,
     padding: 40,
   },
-  heroCover: {
+  authorCard: {
+    width: 400,
+    background: theme.palette.primary.main,
+    padding: theme.spacing(0.5),
+    boxShadow: theme.shadows[10],
+
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto 40px auto',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
+  },
+  aboutCard: {
+    marginBottom: theme.spacing(4),
+    overflow: 'initial',
+    background: theme.palette.primary.main,
+    color: theme.palette.white.main,
+  },
+  aboutCardContent: {
+    width: '98%',
+    margin: 'auto',
+    background: theme.palette.primary.light,
+    transform: 'translate(0, -15px)',
+    borderRadius: theme.shape.borderRadius,
+    boxShadow: theme.shadows[10],
+  },
+  authorImage: {
+    height: 'auto',
+    width: 400,
+    border: `2px solid ${theme.palette.primary.main}`,
+    transform: 'translate(-15px, -15px)',
+    boxShadow: theme.shadows[10],
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
+  },
+  bgImage: {
     position: 'fixed',
     top: 0,
     left: 0,
-    height: '100%',
+    height: '100vh',
     width: '100%',
-    opacity: '0.6',
-    zIndex: 2,
-    background: '#000',
-  },
-  container: {
-    position: 'relative',
-    zIndex: 3,
-    height: '60%',
-    display: 'flex',
-    flexDirection: 'column',
-    borderRadius: 8,
-    borderTop: `4px solid ${theme.palette.white.main}`,
-    borderBottom: `4px solid ${theme.palette.white.main}`,
-
-    padding: `${theme.spacing(6)}px ${theme.spacing(6)}px`,
-  },
-  hookCard: {
-    height: '100%',
-    border: `5px solid ${theme.palette.primary.main}`,
-    background: theme.palette.primary.light,
-    color: theme.palette.white.main,
-    boxShadow: theme.shadows[9],
-  },
-  hookCardFront: {
-    background: theme.palette.primary.main,
-  },
-  hookCardHeader: {
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: theme.spacing(2),
-
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      bottom: 0,
-
-      width: 60,
-      borderBottom: `2px solid #FFF`,
-    },
-  },
-  cardTitle: {},
-  frontCard: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  grid: {
-    flexGrow: 1,
+    background: `url('${books}')`,
+    backgroundColor: theme.palette.white.main,
+    backgroundBlendMode: 'luminosity',
   },
 }));
 
-const flipCardAnimation = side => {
-  if (side === 'back') {
-    return {};
-  }
-  return {};
-};
 export default styles;
