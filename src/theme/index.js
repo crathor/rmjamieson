@@ -13,6 +13,13 @@ let theme = createMuiTheme({
     secondary: {
       main: '#3A506B',
     },
+    // primary: {
+    //   main: '#14213D',
+    //   light: '#545D71',
+    // },
+    // secondary: {
+    //   main: '#297373',
+    // },
     white: {
       main: '#FCF9F6',
     },
