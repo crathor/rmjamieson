@@ -2,36 +2,38 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles(theme => ({
   hero: {
-    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    minHeight: '100vh',
+
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 40,
+      paddingRight: 40,
+      paddingTop: 100,
+      paddingBottom: 40,
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+  },
+  heroContainer: {
+    display: 'flex',
+    alignItems: 'stretch',
+  },
+  heroGrid: {
     flexGrow: 1,
-    display: 'flex',
-    alignItems: 'center',
-    padding: 4,
-    border: 'rgba(255, 255, 255, 0.3)',
   },
-  icon: {
-    fontSize: '12vw',
-    color: '#fff',
-  },
-  iconBack: {
-    fontSize: 59,
-    color: '#fff',
+  heroGridItem: {
+    height: 500,
   },
 
-  container: {
-    position: 'relative',
-    zIndex: 3,
-    height: '60%',
-    display: 'flex',
-    flexDirection: 'column',
-    borderRadius: 8,
-    borderTop: `4px solid ${theme.palette.white.main}`,
-    borderBottom: `4px solid ${theme.palette.white.main}`,
+  // CARD STYLES
 
-    padding: `${theme.spacing(6)}px ${theme.spacing(6)}px`,
-  },
   hookCard: {
     height: '100%',
+    flexGrow: 1,
     border: `5px solid ${theme.palette.primary.main}`,
     background: theme.palette.primary.light,
     color: theme.palette.white.main,
@@ -58,16 +60,22 @@ const styles = makeStyles(theme => ({
       borderBottom: `2px solid #FFF`,
     },
   },
+  icon: {
+    fontSize: '12vw',
+    color: '#fff',
+  },
+  iconBack: {
+    fontSize: 59,
+    color: '#fff',
+  },
   cardTitle: {},
   frontCard: {
     height: '100%',
+    flexGrow: 1,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  grid: {
-    flexGrow: 1,
   },
 }));
 

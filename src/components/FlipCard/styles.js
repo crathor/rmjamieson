@@ -3,18 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 const styles = makeStyles(theme => ({
   flipContainer: {
     position: 'relative',
-    width: '100%',
-    height: '100%',
-    flexGrow: 1,
+    display: 'inline-block',
     perspective: '1000px',
+    height: '100%',
+    width: '100%',
   },
 
   flipSide: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
     height: '100%',
+    width: '100%',
+    position: 'absolute',
     backfaceVisibility: 'hidden',
     transition: theme.transitions.create(['all'], {
       duration: 1000,

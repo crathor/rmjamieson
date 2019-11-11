@@ -21,14 +21,15 @@ const HeroSection = () => {
 
   return (
     <section className={classes.hero}>
-      <Container maxWidth="lg" className={classes.container}>
+      <Container className={classes.heroContainer}>
         <Grid
           container
+          justify="center"
+          alignItems="center"
+          className={classes.heroGrid}
           spacing={2}
-          alignItems="stretch"
-          className={classes.grid}
         >
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={6} md={4} className={classes.heroGridItem}>
             <FlipCard
               flip={addFlip}
               delay={0}
@@ -72,7 +73,7 @@ const HeroSection = () => {
               }
             />
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={6} md={4} className={classes.heroGridItem}>
             <FlipCard
               flip={addFlip}
               delay={150}
@@ -113,7 +114,7 @@ const HeroSection = () => {
               }
             />
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={6} md={4} className={classes.heroGridItem}>
             <FlipCard
               flip={addFlip}
               delay={300}

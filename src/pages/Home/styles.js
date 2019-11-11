@@ -8,17 +8,13 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     background: theme.palette.white.main,
+    border: '1px solid red',
 
     [theme.breakpoints.down('md')]: {
       padding: `${theme.spacing(10)}px 0px`,
     },
   },
   authorContainer: {},
-  authorGrid: {
-    background: theme.palette.primary.light,
-    color: theme.palette.white.main,
-    padding: 40,
-  },
   authorCard: {
     width: 400,
     background: theme.palette.primary.main,
