@@ -19,7 +19,7 @@ const FlipCard = ({
     setTimeout(() => {
       setFlipCard(flip);
     }, delay);
-  }, [flip, flipCard]);
+  }, [flip, flipCard, delay]);
 
   if (flipCard) {
     sideOneClasses.push(classes.flipFrontSide);

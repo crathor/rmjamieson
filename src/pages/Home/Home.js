@@ -1,14 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { HeroSection, AboutSection } from './sections';
-import rebecca from '../../assets/rebecca.png';
-import {
-  Container,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-} from '@material-ui/core';
+
+import { Container, Typography } from '@material-ui/core';
+import { Book } from '../../components';
 import styles from './styles';
+import chapters from './excerpts';
 
 const Home = () => {
   const classes = styles();
@@ -18,6 +14,15 @@ const Home = () => {
       <div className={classes.bgImage}></div>
       <HeroSection />
       <AboutSection />
+      <section className={classes.excerptSection}>
+        <Container className={classes.excerptContainer}>
+          <Book
+            content={chapters.jack.chapterOne.text}
+            title={chapters.jack.title}
+            summary={chapters.jack.summary}
+          />
+        </Container>
+      </section>
     </Fragment>
   );
 };

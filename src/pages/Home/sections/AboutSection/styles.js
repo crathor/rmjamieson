@@ -8,6 +8,9 @@ const styles = makeStyles(theme => ({
     background: theme.palette.white.main,
     border: `5px solid ${theme.palette.primary.main}`,
 
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 'calc(100vh - 56px)',
+    },
     [theme.breakpoints.down('md')]: {
       padding: `${theme.spacing(6)}px 0px`,
     },
